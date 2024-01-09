@@ -11,5 +11,13 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        String s = "Hello";
+        boolean unique = isUnique(s);
+
+    }
+
+    public static boolean isUnique(String s){
+        return false;
     }
 }
