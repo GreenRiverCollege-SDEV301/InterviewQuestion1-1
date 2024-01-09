@@ -17,6 +17,19 @@ public class Main {
     }
 
     public static boolean isUnique(String word) {
+        private CharTreeNode add(CharTreeNode root, char value){
+            if (root == null) {
+                root = new CharTreeNode(value);
+            }else if (value <= root.data) {
+                root.left = add(root.left, value);
+            }else {
+                root.right = add(root.right, value);
+            }
+            return root;
+            }
+        private boolean contains(CharTreeNode root, char value){
+            return root != null && (root.data == value || (value < roo.data && contains (root.left, value)) || (value >= root.data && contains(root.left, value)));
+        }
         return false;
     }
 }
