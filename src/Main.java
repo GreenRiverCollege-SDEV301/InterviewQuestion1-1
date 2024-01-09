@@ -15,7 +15,7 @@ public class Main {
         }
         System.out.println("Is 'string' a unique word: "+isUnique("string")); //prints true
         System.out.println("Is 'unique' a unique word: " + (isUnique("unique"))); //prints false
-        System.out.println("Is 'unique' a unique word: " + (isUnique("Hello"))); //prints false
+        System.out.println("Is 'hello' a unique word: " + (isUnique("hello"))); //prints false
 
     }
 
