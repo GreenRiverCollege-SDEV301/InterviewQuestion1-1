@@ -11,9 +11,25 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        if (isUnique("alwgys")) {
+            System.out.print("The word is unique");
+        } else {
+            System.out.print("The word is not unique!");
+        }
     }
+
     public static boolean isUnique(String word) {
-    //test  code 123123
-        return false;
+        for (int i = 0; i <= word.length()-1; i++) {
+            char a = word.charAt(i);
+            for(int j = i + 1 ; j <= word.length()-1; j++) {
+                if (word.charAt(j) == a) {
+                    return false;
+                }
+            }
+
+        }
+        return true;
     }
+
 }
