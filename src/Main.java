@@ -15,6 +15,8 @@ public class Main {
         }
         System.out.println("Is 'string' a unique word: "+isUnique("string")); //prints true
         System.out.println("Is 'unique' a unique word: " + (isUnique("unique"))); //prints false
+        System.out.println("Is 'unique' a unique word: " + (isUnique("Hello"))); //prints false
+
     }
 
     /**
@@ -30,14 +32,17 @@ public class Main {
     private static boolean isUnique(String word, int index) throws StringIndexOutOfBoundsException
     {
         char letter = word.charAt(index);
-        for (int i = 0; i < word.length(); i++)
+        //String newWord = word.substring(index, word.length()-1);
+        //System.out.println(newWord);
+        for (int i = index; i < word.length(); i++)
         {
+            //System.out.println(letter + " == " + word.charAt(i));
             if (letter == word.charAt(i) && i != index)
             {
                 return false;
             }
         }
-        if (letter == word.charAt(word.length()-1))
+        if (letter != word.charAt(word.length()-1))
         {
             return isUnique(word, index+1);
         }
