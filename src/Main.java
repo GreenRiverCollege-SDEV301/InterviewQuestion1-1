@@ -12,7 +12,7 @@ public class Main {
             System.out.println("i = " + i);
         }
         // quick test
-        System.out.println(isUnique("hello"));
+        System.out.println(isUnique("test"));
     }
 
     public static boolean isUnique(String word) {
