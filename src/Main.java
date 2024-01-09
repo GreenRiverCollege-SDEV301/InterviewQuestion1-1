@@ -11,5 +11,14 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        // quick test
+        boolean result = isUnique("Always");
+        System.out.println(result);
+    }
+
+    public static boolean isUnique(String word)
+    {
+        return false;
     }
 }
