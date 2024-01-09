@@ -1,26 +1,36 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
-        boolean result = isUnique("apple");
-        System.out.println(result);
+        boolean result1 = isUnique("");
+        System.out.println(result1);
+
+        boolean result2 = isUnique("apple");
+        System.out.println(result2);
+
+        boolean result3 = isUnique("thomas");
+        System.out.println(result3);
     }
 
+    /* method that accepts a String and returns whether the word has all unique characters
+       @param String word String that is checked for uniquness
+       @return boolean whether the String is unique
+    */
     public static boolean isUnique(String word){
 
-        for(int i =0; i < word.length(); i++){
-
+        if (word.isEmpty()){
+            return false;
+        }else{
+            HashMap wordChars = new HashMap<>();
+            for(int i =0; i < word.length(); i++){
+                if(wordChars.containsKey(word.charAt(i))){
+                    return false;
+                }else{
+                    wordChars.put(word.charAt(i), 1);
+                }
+            }
+            return true;
         }
-        return true;
-
     }
 }
