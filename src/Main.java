@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -15,9 +17,26 @@ public class Main {
         //Quick Test
         boolean result = isUnique("always");
         System.out.println(result);
+        boolean result2 = isUnique("cat");
+        System.out.println(result2);
     }
 
+    /**
+     * isUnique checks if all characters in a given string are unique
+     * @param word the given string to test
+     * @return true if string is unique and false if not unique
+     */
     public static boolean isUnique(String word) {
-        return false;
+        ArrayList<Character> characters = new ArrayList<>();
+
+        for (int i = 0; i < word.length(); i++) {
+            Character character = word.charAt(i);
+            if (characters.contains(character)) {
+                return false;
+            } else {
+                characters.add(character);
+            }
+        }
+        return true;
     }
 }
