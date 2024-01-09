@@ -16,6 +16,13 @@ public class Main {
         System.out.println("Is 'string' a unique word: "+isUnique("string")); //prints true
         System.out.println("Is 'unique' a unique word: " + (isUnique("unique"))); //prints false
     }
+
+    /**
+     * isUnique method
+     * @param word
+     * @return boolean
+     * @throws StringIndexOutOfBoundsException
+     */
     public static boolean isUnique(String word) throws StringIndexOutOfBoundsException
     {
         return isUnique(word, 0);
