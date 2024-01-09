@@ -19,6 +19,21 @@ public class Main {
 
     public static boolean isUnique(String word)
     {
-        return false;
+        if(word.isEmpty())
+        {
+            return true;
+        }
+        for(int i=0; i<word.length(); i++)
+        {
+            for (int j = 0; j < word.length(); j++)
+            {
+                if(word.charAt(i)==word.charAt(j) && i!=j)
+                {
+                    return false;
+                }
+            }
+
+        }
+        return true;
     }
 }
