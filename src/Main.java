@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -12,10 +14,20 @@ public class Main {
             System.out.println("i = " + i);
         }
         // quick test
-        System.out.println(isUnique("test"));
+        System.out.println("is the word 'water' unique? " + isUnique("water"));
+        System.out.println("is the word 'never' unique? " + isUnique("never"));
     }
 
     public static boolean isUnique(String word) {
-        return false;
+        ArrayList<Character> letters = new ArrayList<>();
+        for (char letter : word.toCharArray()) {
+            if(letters.contains(letter)){
+                return false;
+            }
+            else {
+                letters.add(letter);
+            }
+        }
+        return true;
     }
 }
