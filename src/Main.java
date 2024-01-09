@@ -12,4 +12,13 @@ public class Main {
             System.out.println("i = " + i);
         }
     }
+
+    /**
+     * isUnique checks if all of the characters in the string
+     * are unique
+     * @return
+     */
+    public static boolean isUnique(String word) {
+        return false;
+    }
 }
