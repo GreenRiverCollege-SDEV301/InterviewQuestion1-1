@@ -16,7 +16,7 @@ public class Main {
     }
 
     public static boolean isUnique(String word){
-
+        for(int i =0; )
         return true;
 
     }
