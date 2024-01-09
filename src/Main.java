@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -11,5 +13,21 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+    }
+
+    public static Boolean isUnique(String input) {
+        if (!input.isEmpty()) {
+            input = input.toLowerCase();
+            HashMap<Character, Integer> uniqueCharacters = new HashMap<>();
+            for (int i = 0; i < input.length(); i++) {
+                if (uniqueCharacters.containsKey(input.charAt(i))) {
+                    System.out.println(input.charAt(i));
+                    return false;
+                } else {
+                    uniqueCharacters.put(input.charAt(i), 1);
+                }
+            }
+        }
+        return true;
     }
 }
