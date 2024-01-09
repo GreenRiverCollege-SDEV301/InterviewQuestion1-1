@@ -17,6 +17,11 @@ public class Main {
         System.out.println(result);
     }
 
+    /**
+     * isUnique checks if all the characters in the string are unique
+     * @param word
+     * @return
+     */
     public static boolean isUnique(String word)
     {
         return false;
