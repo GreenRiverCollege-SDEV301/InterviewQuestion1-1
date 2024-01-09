@@ -11,5 +11,32 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+//        quick test
+        boolean result = isUnique("always");
+        System.out.println(result);
+    }
+
+    public static boolean isUnique(String word)
+    {
+//        if string is empty, consider it unique
+        if(word.isEmpty())
+        {
+            return true;
+        }
+//        nested for loop to scan through string to check if all chars are unique
+        for(int i=0; i<word.length(); i++)
+        {
+            for (int j = 0; j < word.length(); j++)
+            {
+                if(word.charAt(i)==word.charAt(j) && i!=j)
+                {
+                    return false;
+                }
+            }
+
+        }
+//        return true if no duplicates are found
+        return true;
     }
 }
