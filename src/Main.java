@@ -19,10 +19,12 @@ public class Main {
 
     public static boolean isUnique(String word)
     {
+//        if string is empty, consider it unique
         if(word.isEmpty())
         {
             return true;
         }
+//        nested for loop to scan through string to check if all chars are unique
         for(int i=0; i<word.length(); i++)
         {
             for (int j = 0; j < word.length(); j++)
@@ -34,6 +36,7 @@ public class Main {
             }
 
         }
+//        return true if no duplicates are found
         return true;
     }
 }
