@@ -21,6 +21,10 @@ public class Main {
         System.out.println(result2);
     }
 
+    //Another way to do this is to use indexOf("a") and lastIndexOf("a")
+    //If they both return different indexes, then it is not unique
+    //Another way to do this is the "inchworm" technique, where we look at a character
+    //And search through the rest of the string to see if it repeats
     /**
      * isUnique checks if all characters in a given string are unique
      * @param word the given string to test
