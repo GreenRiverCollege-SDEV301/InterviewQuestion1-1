@@ -1,3 +1,5 @@
+import java.util.Hashtable;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -11,5 +13,39 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+        System.out.println("Is 'string' a unique word: "+isUnique("string")); //prints true
+        System.out.println("Is 'unique' a unique word: " + (isUnique("unique"))); //prints false
+        System.out.println("Is 'hello' a unique word: " + (isUnique("hello"))); //prints false
+
+    }
+
+    /**
+     * isUnique method
+     * @param word
+     * @return boolean
+     * @throws StringIndexOutOfBoundsException
+     */
+    public static boolean isUnique(String word) throws StringIndexOutOfBoundsException
+    {
+        return isUnique(word, 0);
+    }
+    private static boolean isUnique(String word, int index) throws StringIndexOutOfBoundsException
+    {
+        char letter = word.charAt(index);
+        //String newWord = word.substring(index, word.length()-1);
+        //System.out.println(newWord);
+        for (int i = index; i < word.length(); i++)
+        {
+            //System.out.println(letter + " == " + word.charAt(i));
+            if (letter == word.charAt(i) && i != index)
+            {
+                return false;
+            }
+        }
+        if (letter != word.charAt(word.length()-1))
+        {
+            return isUnique(word, index+1);
+        }
+        return true;
     }
 }
